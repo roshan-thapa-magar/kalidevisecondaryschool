@@ -214,6 +214,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
+          controls
         >
           <source
             src="https://res.cloudinary.com/dzbtzumsd/video/upload/v1756221415/samples/dance-2.mp4"
@@ -262,6 +263,7 @@ export default function HomePage() {
                 src="/images/school.jpg"
                 alt="Kali Devi Secondary School Students"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -367,7 +369,6 @@ export default function HomePage() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  quality={100}
                   sizes="(max-width:768px) 100vw, 25vw"
                   className="object-cover transition duration-300 hover:scale-105"
                 />

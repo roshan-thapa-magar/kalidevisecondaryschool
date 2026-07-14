@@ -94,11 +94,9 @@ export function Header() {
         {/* Mobile Section */}
         <div className="flex items-center gap-2 md:hidden">
           <ModeToggle />
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger >
-              <Button variant="ghost" size="icon">
+          <Sheet open={isOpen} onOpenChange={setIsOpen} >
+            <SheetTrigger  >
                 <Menu className="size-5" />
-              </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72 p-0">
               <SheetHeader className="border-b p-4">

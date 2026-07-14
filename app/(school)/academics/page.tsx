@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Baby, 
-  BookOpen, 
-  Calculator, 
-  CalendarDays, 
-  CheckCircle2, 
-  ChevronRight, 
-  ClipboardCheck, 
-  Clock3, 
-  FlaskConical, 
-  Globe, 
-  GraduationCap, 
-  HeartPulse, 
-  Monitor, 
-  School 
+import {
+  Baby,
+  BookOpen,
+  Calculator,
+  CalendarDays,
+  CheckCircle2,
+  ChevronRight,
+  ClipboardCheck,
+  Clock3,
+  FlaskConical,
+  Globe,
+  GraduationCap,
+  HeartPulse,
+  Monitor,
+  School
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -224,7 +224,8 @@ const FeatureCard = ({
     {imagePosition === "left" && (
       <Card className="overflow-hidden border-border/60 shadow-sm">
         <div className="relative aspect-[4/3]">
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image src={imageSrc} alt={imageAlt} fill sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover" />
         </div>
       </Card>
     )}
@@ -260,7 +261,8 @@ const FeatureCard = ({
     {imagePosition === "right" && (
       <Card className="overflow-hidden border-border/60 shadow-sm">
         <div className="relative aspect-[4/3]">
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image src={imageSrc} alt={imageAlt} fill   sizes="(max-width: 768px) 100vw, 50vw"
+ className="object-cover" />
         </div>
       </Card>
     )}
@@ -424,6 +426,7 @@ export default function AcademicsHero() {
                   src="/images/academics.jpg"
                   alt="Students learning in the classroom"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

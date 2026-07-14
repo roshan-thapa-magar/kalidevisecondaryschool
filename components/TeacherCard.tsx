@@ -38,7 +38,6 @@ export default function TeacherCard({
                         alt={name}
                         width={500}
                         height={700}
-                        quality={100}
                         priority
                         className="h-full w-auto object-contain transition duration-300 group-hover:scale-105"
                     />
