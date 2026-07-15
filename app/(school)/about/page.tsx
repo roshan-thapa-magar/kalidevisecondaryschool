@@ -23,6 +23,7 @@ import {
   Users,
   Volleyball,
 } from "lucide-react";
+import { HeroSection } from "@/components/marketing/hero-section";
 
 export default function AboutPage() {
   // Static data
@@ -155,51 +156,26 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="relative h-[calc(100vh-64px)] w-full overflow-hidden"
-        aria-label="About Kali Devi Secondary School"
-      >
-        <Image
-          src="/images/volleyball.jpg"
-          alt="Kali Devi Secondary School campus and students"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
+      <HeroSection
+        badge="About"
+        title="Kali Devi Secondary School"
+        image="/images/aboutpage.jpg"
+        description={[
+          "Kali Devi Secondary School is committed to providing quality education that inspires students to achieve academic excellence while developing strong moral values, creativity, discipline, and confidence. We believe every student deserves a safe, inclusive, and supportive environment where they can discover their talents and reach their full potential.",
+          "Our experienced teachers, modern learning resources, and student-centered teaching approach encourage curiosity, critical thinking, and lifelong learning. Alongside classroom education, students actively participate in sports, cultural activities, leadership programs, and community service to build essential life skills.",
+        ]}
+        primaryButton={{
+          label: "Home",
+          href: "/",
+        }}
+        secondaryButton={{
+          label: "Admission",
+          href: "/admission",
+        }}
+      />
 
-        <div className="relative z-10 flex h-full items-center justify-center">
-          <div className="max-w-5xl px-6 text-center text-white">
-            <p className="mb-4 text-lg uppercase tracking-[0.3em]">
-              Government of Nepal
-            </p>
 
-            <h1 className="mb-6 text-5xl font-bold md:text-7xl">
-              Kali Devi Secondary School
-            </h1>
-
-            <p className="mx-auto mb-8 max-w-3xl text-lg md:text-2xl">
-              Providing quality education, nurturing responsible citizens, and
-              empowering students through knowledge, discipline, and community
-              values.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-5">
-              <Button size="lg" >
-                <Link href="/admission">Admission</Link>
-              </Button>
-
-              <Button size="lg" variant="outline" >
-                <Link href="/about">Explore School</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-28 bg-muted">
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Image */}
@@ -259,7 +235,7 @@ export default function AboutPage() {
       </section>
 
       {/* Principal Section */}
-      <section className="py-16 lg:py-24" aria-label="Principal's message">
+      <section className="py-16 lg:py-24 bg-muted/30" aria-label="Principal's message">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Image */}
@@ -309,7 +285,7 @@ export default function AboutPage() {
 
       {/* Chairperson Section */}
       <section
-        className="bg-muted/30 py-16 lg:py-24"
+        className="py-16 lg:py-24"
         aria-label="Chairperson's message"
       >
         <div className="container mx-auto max-w-7xl px-6">
@@ -365,7 +341,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-20 lg:py-28" aria-label="Vision and mission">
+      <section className="py-20 lg:py-28 bg-muted/30" aria-label="Vision and mission">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -433,7 +409,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="bg-muted/30 py-20 lg:py-28" aria-label="Core values">
+      <section className="py-20 lg:py-28" aria-label="Core values">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -469,7 +445,7 @@ export default function AboutPage() {
       </section>
 
       {/* Teacher Preview */}
-      <section className="py-20 lg:py-28" aria-label="Our teachers">
+      <section className="py-20 lg:py-28 bg-muted/30" aria-label="Our teachers">
         <div className="container mx-auto max-w-7xl px-6">
           {/* Section Heading */}
           <div className="mx-auto mb-14 max-w-3xl text-center">
@@ -506,7 +482,7 @@ export default function AboutPage() {
       </section>
 
       {/* Facilities Section */}
-      <section className="bg-muted/30 py-20 lg:py-28" aria-label="School facilities">
+      <section className=" py-20 lg:py-28" aria-label="School facilities">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

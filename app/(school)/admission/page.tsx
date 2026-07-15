@@ -14,6 +14,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { HeroSection } from "@/components/marketing/hero-section";
 
 // ================= DATA =================
 const admissionInfo = [
@@ -127,9 +128,28 @@ export default function AdmissionPage() {
   return (
     <main>
       {/* ================= HERO SECTION ================= */}
+
+      <HeroSection
+        badge="Apply at"
+        title="Kali Devi Secondary School"
+        image="/images/admission.jpg"
+        description={[
+          "Start your child's educational journey with Kali Devi Secondary School, where academic excellence, character development, and lifelong learning go hand in hand.",
+          "Our experienced teachers, student-centered learning approach, and supportive environment help every child develop knowledge, confidence, creativity, and leadership skills.",
+          "Admissions are open for eligible students from ECD to Grade 12. We welcome parents to join our vibrant learning community and provide their children with a strong foundation for future success.",
+        ]}
+        primaryButton={{
+          label: "Home",
+          href: "/",
+        }}
+        secondaryButton={{
+          label: "Admission Process",
+          href: "/admission",
+        }}
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-primary/10 to-background py-24 lg:py-32">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-        
+
         <div className="container mx-auto max-w-7xl px-6 text-center relative z-10">
           <Badge variant="outline" className="rounded-full border-primary/20 bg-primary/5 px-6 py-2 text-primary">
             Admission Open

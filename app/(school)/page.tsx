@@ -1,3 +1,4 @@
+import { HeroSection } from "@/components/marketing/hero-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -158,7 +159,7 @@ const NoticeCard = ({ notice }: { notice: typeof notices[0] }) => (
         </div>
       </div>
       <Button>
-        <Link href="/notices">
+        <Link href="/notices" className="flex items-center">
           Read More
           <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
@@ -224,52 +225,20 @@ export default function HomePage() {
       </section>
 
       {/* ================= SCHOOL OVERVIEW ================= */}
-      <section className="py-24 lg:py-32 bg-muted">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            {/* Left Content */}
-            <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-                Explore
-              </p>
-              <h2 className="text-4xl font-bold leading-tight sm:text-5xl">
-                Life
-                <br />
-                At KDSS
-              </h2>
-              <div className="mt-8 space-y-5 text-lg leading-8 text-muted-foreground text-justify">
-                <p>
-                  Beginning your learning journey at Kali Devi Secondary School
-                  is a meaningful experience filled with knowledge, discovery,
-                  friendship, and personal growth.
-                </p>
-                <p>
-                  We provide a supportive learning environment where students
-                  develop academic excellence, creativity, discipline, and
-                  confidence to prepare for future opportunities.
-                </p>
-                <p>
-                  Through experienced teachers, modern facilities, extracurricular
-                  activities, and community values, we help students become
-                  responsible and successful citizens.
-                </p>
-              </div>
-              <Button className="mt-8">Explore School</Button>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative h-[500px] overflow-hidden rounded-3xl">
-              <Image
-                src="/images/school.jpg"
-                alt="Kali Devi Secondary School Students"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        badge="Explore"
+        title="Life At KDSS"
+        image="/images/school.jpg"
+        description={[
+          "Beginning your learning journey at Kali Devi Secondary School is a meaningful experience filled with knowledge, discovery, friendship, and personal growth.",
+          "We provide a supportive learning environment where students develop academic excellence, creativity, discipline, and confidence to prepare for future opportunities.",
+          "Through experienced teachers, modern facilities, extracurricular activities, and community values, we help students become responsible and successful citizens.",
+        ]}
+        primaryButton={{
+          label: "Explore School",
+          href: "/about",
+        }}
+      />
 
       {/* ================= SCHOOL AT A GLANCE ================= */}
       <section className="relative overflow-hidden py-20 lg:py-28">

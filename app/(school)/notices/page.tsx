@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { HeroSection } from "@/components/marketing/hero-section";
 
 // ================= DATA =================
 const notices = [
@@ -224,39 +225,25 @@ export default function NoticePage() {
   return (
     <main>
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-primary/10 to-background py-24">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-        
-        <div className="container mx-auto max-w-7xl px-6 text-center relative z-10">
-          <Badge variant="outline" className="rounded-full border-primary/20 bg-primary/5 px-6 py-2 text-primary">
-            Stay Informed
-          </Badge>
-
-          <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
-            Latest Announcements & Updates
-          </h1>
-
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Stay informed about academic activities, examinations,
-            admissions, events, and important school announcements.
-          </p>
-
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="rounded-full px-8">
-              <Bell className="mr-2 h-4 w-4" />
-              Subscribe to Updates
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8">
-              <FileText className="mr-2 h-4 w-4" />
-              View All Notices
-            </Button>
-          </div>
-        </div>
-
-        {/* Decorative elements */}
-        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
-      </section>
+      <HeroSection
+        badge="Stay Informed"
+        title="Latest Announcements & Updates"
+        description={[
+          "Stay informed about all academic activities, examinations, admissions, events, and important school announcements at Kali Devi Secondary School.",
+          "We provide timely updates on exam schedules, results, holiday notices, parent-teacher meetings, and extracurricular activities to ensure you never miss any important information.",
+          "Our dedicated team works diligently to keep parents, students, and staff updated with the latest news and developments happening across the school community.",
+          "From academic calendars to special events and emergency notifications, we ensure all stakeholders are well-informed and connected with the school's daily operations.",
+        ]}
+        image="/images/notices.jpg"
+        primaryButton={{
+          label: "Home",
+          href: "/",
+        }}
+        secondaryButton={{
+          label: "Notices",
+          href: "/notices",
+        }}
+      />
 
       {/* ================= IMPORTANT NOTICE ================= */}
       {importantNotices.length > 0 && (
