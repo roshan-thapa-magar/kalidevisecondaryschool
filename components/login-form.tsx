@@ -69,10 +69,11 @@ export default function LoginForm() {
               <Label htmlFor="remember">Remember me</Label>
             </div>
           </div>
-
-          <Button className="h-11 w-full text-base">
-            Login
-          </Button>
+          <Link href="/dashboard" >
+            <Button className="h-11 w-full text-base">
+              Login
+            </Button>
+          </Link>
 
           <p className="text-center text-xs text-muted-foreground">
             Authorized personnel only.
